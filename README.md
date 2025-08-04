@@ -2,13 +2,6 @@
 
 This repository serves as a **QA portfolio project** containing manual test cases, automation scripts, and bug reporting for end-to-end testing of **[SauceDemo](https://www.saucedemo.com/)** — a demo e-commerce web application provided by Sauce Labs for testing practice.
 
-The test coverage includes:
-- ✅ Functional Testing  
-- 🎨 UI Validation  
-- ❌ Negative Testing  
-- 🔄 Flow Verification  
-- 🐞 Bug Tracking & Reporting
-
 ---
 
 ## 📦 Scope of Testing
