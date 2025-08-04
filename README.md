@@ -1,12 +1,13 @@
 # 🧪 SauceDemo QA Testing Project
 
-This project contains test cases for the end-to-end testing of **[SauceDemo](https://www.saucedemo.com/)**, a sample e-commerce web application provided by Sauce Labs for practicing manual and automated testing.
+This repository serves as a **QA portfolio project** containing manual test cases, automation scripts, and bug reporting for end-to-end testing of **[SauceDemo](https://www.saucedemo.com/)** — a demo e-commerce web application provided by Sauce Labs for testing practice.
 
 The test coverage includes:
 - ✅ Functional Testing  
 - 🎨 UI Validation  
 - ❌ Negative Testing  
-- 🔄 Flow Verification
+- 🔄 Flow Verification  
+- 🐞 Bug Tracking & Reporting
 
 ---
 
@@ -91,11 +92,14 @@ The test coverage includes:
 
 ---
 
-## 🧰 Tools Used (optional section)
+## 🧰 Tools Used
 
-- Manual Test Cases: Qase.io / PDF Format  
+- Manual Test Cases: Qase.io / PDF / CSV  
 - Automation: Playwright  
-- Language: JavaScript / TypeScript  
-- Reports: HTML / Allure
+- Programming Language: JavaScript / TypeScript  
+- Bug Reports: Markdown + Screenshot + Steps to Reproduce  
+- Test Reports: HTML / Allure  
 
 ---
+
+Feel free to fork, clone, or contribute for QA learning and portfolio building purposes.
