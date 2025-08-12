@@ -25,40 +25,16 @@ Before starting, make sure you have installed:
    ```bash
     cd saucedemo/automation
 
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/fahmigd/saucedemo.git
+---
 
-2. Clone the repository:
+## 📦 Install Dependencies
+Install all required npm packages:
    ```bash
-   git clone https://github.com/fahmigd/saucedemo.git
+   npm install
 
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/fahmigd/saucedemo.git
+---
 
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/fahmigd/saucedemo.git
+---
 
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/fahmigd/saucedemo.git
 
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/fahmigd/saucedemo.gitt
 
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/fahmigd/saucedemo.gitt
-
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/fahmigd/saucedemo.gitt
-
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/fahmigd/saucedemo.git
-
-  
