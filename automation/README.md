@@ -21,20 +21,82 @@ Before starting, make sure you have installed:
 2. Clone the repository:
    ```bash
    git clone https://github.com/fahmigd/saucedemo.git
+   ```
 3. Navigate to the automation folder:
    ```bash
     cd saucedemo/automation
+   ```
 
----
+----
 
 ## 📦 Install Dependencies
 Install all required npm packages:
    ```bash
-   npm install
+    npm install
+```
+
+----
+
+## 📦 Install Dependencies
+Install all required npm packages:
+   ```bash
+    npm install
+```
+
+----
+
+## 📦 Install Dependencies
+Install all required npm packages:
+   ```bash
+    npm install
+```
+
+----
+
+## 📦 Install Dependencies
+Install all required npm packages:
+   ```bash
+    npm install
+```
+
+----
+
+## 📦 Install Dependencies
+Install all required npm packages:
+   ```bash
+    npm install
+```
+
+----
+
+## 📦 Install Dependencies
+Install all required npm packages:
+   ```bash
+    npm install
+```
+
+----
+
+## 📦 Install Dependencies
+Install all required npm packages:
+   ```bash
+    npm install
+```
+
+----
+
+## 📦 Install Dependencies
+Install all required npm packages:
+   ```bash
+    npm install
+```
+
+----
+
+## 📦 Install Dependencies
+Install all required npm packages:
+   ```bash
+    npm install
+```
 
 ---
-
----
-
-
-
