@@ -8,7 +8,7 @@ This includes both **positive** and **negative** test cases, covering:
 - Field validations (required fields, input format)  
 - UI checks for login form elements  
 - Error message validations
-![Login Page Screenshot](https://prnt.sc/wJOi_sfj-tze) 
+![Login Page Screenshot](Assets/login.png)
 ---
 
 ## 2. Inventory (Product Listing)
