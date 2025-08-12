@@ -76,4 +76,4 @@ This suite includes test cases for validating the **Side Navigation Menu** funct
 - Security validations ensuring the menu is only accessible when the user is logged in  
   
 **Test Case Side Navigation Menu**  
-![Test Case Side Navigation Menu Screenshot](Assets/login.png)  
+![Test Case Side Navigation Menu Screenshot](Assets/menu.png)  
