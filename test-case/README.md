@@ -7,8 +7,8 @@ This includes both **positive** and **negative** test cases, covering:
 - Invalid login attempts (wrong username, wrong password, locked-out users)  
 - Field validations (required fields, input format)  
 - UI checks for login form elements  
-- Error message validations  
-
+- Error message validations
+![Login Page Screenshot](https://prnt.sc/wJOi_sfj-tze) 
 ---
 
 ## 2. Inventory (Product Listing)
