@@ -37,66 +37,53 @@ Install all required npm packages:
 
 ----
 
-## 📦 Install Dependencies
-Install all required npm packages:
+## ⚙️ Install Playwright Browsers
+Playwright requires browser binaries to run tests. Install them with:
    ```bash
-    npm install
+    npx playwright install
 ```
 
 ----
 
-## 📦 Install Dependencies
-Install all required npm packages:
+## ▶️ Running Tests
+### Run all tests:
    ```bash
-    npm install
+    npx playwright test
+```
+### Run a specific test file:
+   ```bash
+    npx playwright test tests/login.spec.js
+```
+### Run a specific test case by title :
+   ```bash
+    npx playwright test -g "Valid login with correct credentials"
+```
+### Run tests in headed mode (show browser UI):
+   ```bash
+    npx playwright test --headed
+```
+### Run tests in UI mode (Playwright Test Runner):
+   ```bash
+    npx playwright test --ui
+```
+### Run tests in a specific browser:
+   ```bash
+    npx playwright test --project=chromium
+    npx playwright test --project=firefox
+    npx playwright test --project=webkit
 ```
 
 ----
 
-## 📦 Install Dependencies
-Install all required npm packages:
+## 📄 Viewing Test Reports
+After running tests, view the HTML report:
    ```bash
-    npm install
+    npx playwright show-report
 ```
-
-----
-
-## 📦 Install Dependencies
-Install all required npm packages:
-   ```bash
-    npm install
-```
-
-----
-
-## 📦 Install Dependencies
-Install all required npm packages:
-   ```bash
-    npm install
-```
-
-----
-
-## 📦 Install Dependencies
-Install all required npm packages:
-   ```bash
-    npm install
-```
-
-----
-
-## 📦 Install Dependencies
-Install all required npm packages:
-   ```bash
-    npm install
-```
-
-----
-
-## 📦 Install Dependencies
-Install all required npm packages:
-   ```bash
-    npm install
-```
+This will open a detailed test report in your default browser, showing:
+- ✅ Passed / failed test cases
+- ⏱ Execution time
+- 🖼 Screenshots (for failed tests)
+- 📂 Traces (if enabled)
 
 ---
