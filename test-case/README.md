@@ -7,10 +7,11 @@ This includes both **positive** and **negative** test cases, covering:
 - Invalid login attempts (wrong username, wrong password, locked-out users)  
 - Field validations (required fields, input format)  
 - UI checks for login form elements  
-- Error message validations
+- Error message validations  
+  
+**Test Case Login**  
+![Test Case Login Screenshot](Assets/login.png)  
 
-Test Case :
-![Login Page Screenshot](Assets/login.png)
 ---
 
 ## 2. Inventory (Product Listing)
@@ -31,6 +32,9 @@ This test suite covers:
 - Functionality of action buttons  
 - Product sorting features  
 - Positive and negative test scenarios to ensure system reliability and stability  
+  
+**Test Case Inventory - Product Listing**  
+![Test Case Inventory Screenshot](Assets/inventory.png)  
 
 ---
 
@@ -40,6 +44,9 @@ This suite contains test cases for validating the **Product Details Page** on Sa
 - **Add to Cart** functionality from details page  
 - Navigation behavior (back to product list, cart, etc.)  
 - Negative scenarios for edge case validation  
+  
+**Test Case Product Details**  
+![Test Case Product Details Screenshot](Assets/product_detail.png)  
 
 ---
 
@@ -51,6 +58,9 @@ This suite covers test cases for the **Shopping Cart** functionality, including:
 - Subtotal price accuracy  
 - Navigation flow to Checkout  
 - Edge case scenarios to ensure cart data consistency  
+  
+**Test Case Shopping Cart**  
+![Test Case Shopping Cart Screenshot](Assets/shopping_cart.png)  
 
 ---
 
@@ -64,3 +74,6 @@ This suite includes test cases for validating the **Side Navigation Menu** funct
   - Reset App State  
 - Accessibility via keyboard navigation  
 - Security validations ensuring the menu is only accessible when the user is logged in  
+  
+**Test Case Side Navigation Menu**  
+![Test Case Side Navigation Menu Screenshot](Assets/login.png)  
