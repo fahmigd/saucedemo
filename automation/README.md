@@ -21,44 +21,69 @@ Before starting, make sure you have installed:
 2. Clone the repository:
    ```bash
    git clone https://github.com/fahmigd/saucedemo.git
+   ```
 3. Navigate to the automation folder:
    ```bash
     cd saucedemo/automation
+   ```
 
-2. Clone the repository:
+----
+
+## 📦 Install Dependencies
+Install all required npm packages:
    ```bash
-   git clone https://github.com/fahmigd/saucedemo.git
+    npm install
+```
 
-2. Clone the repository:
+----
+
+## ⚙️ Install Playwright Browsers
+Playwright requires browser binaries to run tests. Install them with:
    ```bash
-   git clone https://github.com/fahmigd/saucedemo.git
+    npx playwright install
+```
 
-2. Clone the repository:
+----
+
+## ▶️ Running Tests
+### Run all tests:
    ```bash
-   git clone https://github.com/fahmigd/saucedemo.git
-
-2. Clone the repository:
+    npx playwright test
+```
+### Run a specific test file:
    ```bash
-   git clone https://github.com/fahmigd/saucedemo.git
-
-2. Clone the repository:
+    npx playwright test tests/login.spec.js
+```
+### Run a specific test case by title :
    ```bash
-   git clone https://github.com/fahmigd/saucedemo.git
-
-2. Clone the repository:
+    npx playwright test -g "Valid login with correct credentials"
+```
+### Run tests in headed mode (show browser UI):
    ```bash
-   git clone https://github.com/fahmigd/saucedemo.gitt
-
-2. Clone the repository:
+    npx playwright test --headed
+```
+### Run tests in UI mode (Playwright Test Runner):
    ```bash
-   git clone https://github.com/fahmigd/saucedemo.gitt
-
-2. Clone the repository:
+    npx playwright test --ui
+```
+### Run tests in a specific browser:
    ```bash
-   git clone https://github.com/fahmigd/saucedemo.gitt
+    npx playwright test --project=chromium
+    npx playwright test --project=firefox
+    npx playwright test --project=webkit
+```
 
-2. Clone the repository:
+----
+
+## 📄 Viewing Test Reports
+After running tests, view the HTML report:
    ```bash
-   git clone https://github.com/fahmigd/saucedemo.git
+    npx playwright show-report
+```
+This will open a detailed test report in your default browser, showing:
+- ✅ Passed / failed test cases
+- ⏱ Execution time
+- 🖼 Screenshots (for failed tests)
+- 📂 Traces (if enabled)
 
-  
+---
