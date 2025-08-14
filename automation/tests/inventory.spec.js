@@ -37,7 +37,7 @@ test.describe("Inventory Feature", () => {
     expect(productName).toEqual(productNameAsc);
   });
 
-  test("SD-11 Verify sorting products by Name (A to Z)", async () => {
+  test("SD-11 Verify sorting products by Name (Z to A)", async () => {
     await inventoryPage.sortBy(sort.nameDesc);
     const productName = await inventoryPage.getProductNames();
     const productNameDesc = await inventoryPage.sortProductNamesDesc(
@@ -53,7 +53,6 @@ test.describe("Inventory Feature", () => {
       productPrice
     );
     expect(productPrice).toEqual(productPriceAsc);
-    console.log(productPriceAsc);
   });
 
   test("SD-13 Verify sorting products by Price (high to low)", async () => {
@@ -63,7 +62,6 @@ test.describe("Inventory Feature", () => {
       productPrice
     );
     expect(productPrice).toEqual(productPriceDesc);
-    console.log(productPriceDesc);
   });
 
   test("SD-14 Verify clicking product name navigates to details", async () => {
