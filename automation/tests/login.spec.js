@@ -1,17 +1,22 @@
 const { test, expect } = require("@playwright/test");
 const { LoginPage } = require("../pages/login.page");
+const { InventoryPage } = require("../pages/inventory.page");
 const { validUser, lockoutUser, invalidUser } = require("../data/login.data");
 
 test.describe("Login Feature", () => {
   let loginPage;
+  let inventoryPage;
 
   test.beforeEach(async ({ page }) => {
     loginPage = new LoginPage(page);
+    inventoryPage = new InventoryPage(page);
   });
 
-  test("SD-01 Login with valid credentials", async () => {
+  test("SD-01 Login with valid credentials", async ({ page }) => {
     await loginPage.goTo();
     await loginPage.login(validUser.username, validUser.password);
+    await expect(inventoryPage.titlePage).toHaveText("Products");
+    expect(page.url()).toContain("/inventory.html");
   });
 
   test("SD-02 Login with locked out user", async () => {

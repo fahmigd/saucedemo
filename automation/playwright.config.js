@@ -8,18 +8,18 @@ const config = {
   testDir: "./tests",
 
   //object timeout
-  timeout: 60 * 1000,
+  timeout: 20 * 1000,
 
   //expectation timeout
   expect: {
-    timeout: 60 * 1000,
+    timeout: 20 * 1000,
   },
 
   reporter: "html",
 
   //browser used
   use: {
-    baseURL: "https://o2.openmrs.org/openmrs",
+    baseURL: "https://www.saucedemo.com",
     browserName: "chromium",
     launchOptions: {
       args: ["--start-maximized"], // Buka browser dalam mode fullscreen
