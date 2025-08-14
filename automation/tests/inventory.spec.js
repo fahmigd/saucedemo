@@ -70,10 +70,10 @@ test.describe("Inventory Feature", () => {
     const description = await inventoryPage.productDescription
       .nth(0)
       .textContent();
-    const price = await inventoryPage.productPrice.nth(0).textContent();
-    console.log(name);
-    console.log(image);
-    console.log(description);
-    console.log(price);
+    // const price = await inventoryPage.productPrice.nth(0).textContent();
+    // console.log(name);
+    // console.log(image);
+    // console.log(description);
+    // console.log(price);
   });
 });
