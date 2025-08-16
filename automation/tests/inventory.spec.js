@@ -144,18 +144,18 @@ test.describe("Inventory Feature", () => {
 
   test("SD-17 Verify removing product from cart via Inventory Page", async () => {
     await inventoryPage.goTo();
-    console.log(await headerPage.getShoppingCartBadgeCount());
     let shoppingCartBadgeCount = null;
     let removeFromCartButtonCount = null;
     let isVisible = await headerPage.shoppingCartBadgeIsVisible();
-    if (isVisible) {
-      shoppingCartBadgeCount = await headerPage.getShoppingCartBadgeCount();
-      for (let i = 0; i < shoppingCartBadgeCount; i++) {
-        await inventoryPage.clickRemoveFromCartButton(0);
-      }
+    if (!isVisible) {
+      await inventoryPage.clickAddToCartButton(0);
     }
-    await expect(headerPage.shoppingCartBadge).toBeVisible();
     shoppingCartBadgeCount = await headerPage.getShoppingCartBadgeCount();
+    for (let i = 0; i < shoppingCartBadgeCount; i++) {
+      await inventoryPage.clickRemoveFromCartButton(0);
+    }
+    await expect(headerPage.shoppingCartBadge).toBeHidden();
+    shoppingCartBadgeCount = 0;
     removeFromCartButtonCount =
       await inventoryPage.getRemoveFromCartButtonCount();
     await expect(shoppingCartBadgeCount).toBe(removeFromCartButtonCount);
