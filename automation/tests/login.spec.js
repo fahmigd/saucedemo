@@ -16,7 +16,7 @@ test.describe("Login Feature", () => {
     await loginPage.goTo();
     await loginPage.login(validUser.username, validUser.password);
     await expect(inventoryPage.titlePage).toHaveText("Products");
-    expect(page.url()).toContain("/inventory.html");
+    await expect(page.url()).toContain("/inventory.html");
   });
 
   test("SD-02 Login with locked out user", async () => {

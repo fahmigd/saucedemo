@@ -8,7 +8,7 @@ class ProductDetailPage {
       .locator("img");
     this.productDescription = page.locator("[data-test='inventory-item-desc']");
     this.productPrice = page.locator("[data-test='inventory-item-price']");
-    this.productAddtoCartButton = page.locator("[data-test='add-to-cart']");
+    this.addtoCartButton = page.locator("[data-test='add-to-cart']");
   }
 
   async getProductName() {

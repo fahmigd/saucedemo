@@ -6,8 +6,11 @@ class InventoryPage {
     this.productImage = page.locator(".inventory_item_img").locator("img");
     this.productDescription = page.locator(".inventory_item_desc");
     this.productPrice = page.locator(".inventory_item_price");
-    this.productAddToCartButton = page.locator(
+    this.addToCartButton = page.locator(
       ".btn.btn_primary.btn_small.btn_inventory"
+    );
+    this.removeFromCartButton = page.locator(
+      ".btn.btn_secondary.btn_small.btn_inventory "
     );
     this.sortDropdown = page.locator('[data-test="product-sort-container"]');
   }
@@ -47,6 +50,10 @@ class InventoryPage {
     return await this.productName.count();
   }
 
+  async getRemoveFromCartButtonCount() {
+    return await this.removeFromCartButton.count();
+  }
+
   async sortBy(optionValue) {
     await this.sortDropdown.selectOption(optionValue);
   }
@@ -81,6 +88,14 @@ class InventoryPage {
 
   async clickProductImage(i) {
     await this.productImage.nth(i).click();
+  }
+
+  async clickAddToCartButton(i) {
+    await this.addToCartButton.nth(i).click();
+  }
+
+  async clickRemoveFromCartButton(i) {
+    await this.removeFromCartButton.nth(i).click();
   }
 }
 
