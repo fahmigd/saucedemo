@@ -103,14 +103,12 @@ test.describe("Product Detail Feature", () => {
   });
 
   test("SD-24 Verify Add to Cart button changes to Remove", async () => {
-    let shoppingCartBadgeCountBefore = 0;
-    let shoppingCartBadgeCountAfter = 0;
-    let shoppingCartBadgeCount = 0;
-
     let isRemoveCardButtonVisible =
       await productDetailPage.removeFromCartButtonIsVisible();
     if (isRemoveCardButtonVisible) {
       await productDetailPage.clickRemoveFromCartButton();
     }
+    await productDetailPage.clickAddToCartButton();
+    await expect(productDetailPage.removeFromCartButton).toBeVisible();
   });
 });
