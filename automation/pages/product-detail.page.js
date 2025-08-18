@@ -8,7 +8,8 @@ class ProductDetailPage {
       .locator("img");
     this.productDescription = page.locator("[data-test='inventory-item-desc']");
     this.productPrice = page.locator("[data-test='inventory-item-price']");
-    this.addtoCartButton = page.locator("[data-test='add-to-cart']");
+    this.addToCartButton = page.locator("[data-test='add-to-cart']");
+    this.removeFromCartButton = page.locator("[data-test='remove']");
   }
 
   async getProductName() {
@@ -25,6 +26,22 @@ class ProductDetailPage {
 
   async getProductPrice() {
     await this.productPrice.textContent();
+  }
+
+  async removeFromCartButtonIsVisible() {
+    return await this.removeFromCartButton.isVisible();
+  }
+
+  async getRemoveFromCartButtonCount() {
+    return await this.removeFromCartButton.count();
+  }
+
+  async clickAddToCartButton() {
+    await this.addToCartButton.click();
+  }
+
+  async clickRemoveFromCartButton() {
+    await this.removeFromCartButton.click();
   }
 }
 

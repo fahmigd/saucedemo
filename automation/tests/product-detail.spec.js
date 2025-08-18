@@ -52,7 +52,30 @@ test.describe("Product Detail Feature", () => {
   });
 
   test("SD-21 Verify Add to Cart from Product Details Page", async () => {
-    console.log("test 1");
+    let shoppingCartBadgeCountBefore = 0;
+    let shoppingCartBadgeCountAfter = 0;
+    let shoppingCartBadgeCount = null;
+
+    let isRemoveCardButtonVisible =
+      await productDetailPage.removeFromCartButtonIsVisible();
+    console.log(isRemoveCardButtonVisible);
+    if (isRemoveCardButtonVisible) {
+      await productDetailPage.clickRemoveFromCartButton();
+    }
+
+    let isCardBadgeVisible = await headerPage.shoppingCartBadgeIsVisible();
+    if (isCardBadgeVisible) {
+      shoppingCartBadgeCountBefore =
+        await headerPage.getShoppingCartBadgeCount();
+    }
+    console.log("count before " + shoppingCartBadgeCountBefore);
+    await productDetailPage.clickAddToCartButton();
+    shoppingCartBadgeCountAfter = shoppingCartBadgeCountBefore + 1;
+    console.log("count after " + shoppingCartBadgeCountAfter);
+
+    shoppingCartBadgeCount = await headerPage.getShoppingCartBadgeCount();
+    console.log("count " + shoppingCartBadgeCount);
+    await expect(shoppingCartBadgeCount).toBe(shoppingCartBadgeCountAfter);
   });
 
   test("SD-22 Verify Add to Cart from Product Details Page", async () => {

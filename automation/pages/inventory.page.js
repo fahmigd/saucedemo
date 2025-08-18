@@ -50,10 +50,6 @@ class InventoryPage {
     return await this.productName.count();
   }
 
-  async getRemoveFromCartButtonCount() {
-    return await this.removeFromCartButton.count();
-  }
-
   async sortBy(optionValue) {
     await this.sortDropdown.selectOption(optionValue);
   }
