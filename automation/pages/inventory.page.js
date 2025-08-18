@@ -93,6 +93,10 @@ class InventoryPage {
   async clickRemoveFromCartButton(i) {
     await this.removeFromCartButton.nth(i).click();
   }
+
+  async getRemoveFromCartButtonCount() {
+    return await this.removeFromCartButton.count();
+  }
 }
 
 module.exports = { InventoryPage };

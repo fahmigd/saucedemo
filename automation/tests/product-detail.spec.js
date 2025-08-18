@@ -54,11 +54,10 @@ test.describe("Product Detail Feature", () => {
   test("SD-21 Verify Add to Cart from Product Details Page", async () => {
     let shoppingCartBadgeCountBefore = 0;
     let shoppingCartBadgeCountAfter = 0;
-    let shoppingCartBadgeCount = null;
+    let shoppingCartBadgeCount = 0;
 
     let isRemoveCardButtonVisible =
       await productDetailPage.removeFromCartButtonIsVisible();
-    console.log(isRemoveCardButtonVisible);
     if (isRemoveCardButtonVisible) {
       await productDetailPage.clickRemoveFromCartButton();
     }
@@ -68,17 +67,50 @@ test.describe("Product Detail Feature", () => {
       shoppingCartBadgeCountBefore =
         await headerPage.getShoppingCartBadgeCount();
     }
-    console.log("count before " + shoppingCartBadgeCountBefore);
     await productDetailPage.clickAddToCartButton();
     shoppingCartBadgeCountAfter = shoppingCartBadgeCountBefore + 1;
-    console.log("count after " + shoppingCartBadgeCountAfter);
 
     shoppingCartBadgeCount = await headerPage.getShoppingCartBadgeCount();
-    console.log("count " + shoppingCartBadgeCount);
     await expect(shoppingCartBadgeCount).toBe(shoppingCartBadgeCountAfter);
   });
 
   test("SD-22 Verify Add to Cart from Product Details Page", async () => {
-    console.log("test 2");
+    let shoppingCartBadgeCountBefore = 0;
+    let shoppingCartBadgeCountAfter = 0;
+    let shoppingCartBadgeCount = 0;
+
+    let isRemoveCardButtonVisible =
+      await productDetailPage.removeFromCartButtonIsVisible();
+    if (!isRemoveCardButtonVisible) {
+      await productDetailPage.clickAddToCartButton();
+    }
+
+    shoppingCartBadgeCountBefore = await headerPage.getShoppingCartBadgeCount();
+    await productDetailPage.clickRemoveFromCartButton();
+    shoppingCartBadgeCountAfter = shoppingCartBadgeCountBefore - 1;
+
+    let isCardBadgeVisible = await headerPage.shoppingCartBadgeIsVisible();
+    if (!isCardBadgeVisible) {
+      shoppingCartBadgeCount = 0;
+    }
+    await expect(shoppingCartBadgeCount).toBe(shoppingCartBadgeCountAfter);
+  });
+
+  test("SD-23 Verify Back to Products button navigates correctly", async () => {
+    await productDetailPage.clickBackToProductButton();
+    await expect(inventoryPage.titlePage).toHaveText("Products");
+    await expect(page.url()).toContain("/inventory.html");
+  });
+
+  test("SD-24 Verify Add to Cart button changes to Remove", async () => {
+    let shoppingCartBadgeCountBefore = 0;
+    let shoppingCartBadgeCountAfter = 0;
+    let shoppingCartBadgeCount = 0;
+
+    let isRemoveCardButtonVisible =
+      await productDetailPage.removeFromCartButtonIsVisible();
+    if (isRemoveCardButtonVisible) {
+      await productDetailPage.clickRemoveFromCartButton();
+    }
   });
 });

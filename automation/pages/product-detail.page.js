@@ -43,6 +43,10 @@ class ProductDetailPage {
   async clickRemoveFromCartButton() {
     await this.removeFromCartButton.click();
   }
+
+  async clickBackToProductButton() {
+    await this.backToProductButton.click();
+  }
 }
 
 module.exports = { ProductDetailPage };
