@@ -5,10 +5,12 @@ class ShoppingCartPage {
     this.continueShoppingButton = page.locator(
       "[data-test='continue-shopping']"
     );
+    this.qtyLabel = page.locator("[data-test='cart-quantity-label']");
+    this.descriptionLabel = page.locator("[data-test='cart-desc-label']");
+    this.checkoutButton = page.locator("[data-test='checkout']");
     this.productName = page.locator("[data-test='inventory-item-name']");
     this.productDescription = page.locator("[data-test='inventory-item-desc']");
     this.productPrice = page.locator("[data-test='inventory-item-price']");
-    this.addToCartButton = page.locator("[data-test='add-to-cart']");
     this.removeFromCartButton = page.locator(
       ".btn.btn_secondary.btn_small.btn_inventory "
     );
@@ -28,6 +30,29 @@ class ShoppingCartPage {
 
   async getProductNameList() {
     return await this.productName.allTextContents();
+  }
+
+  async getProductDescriptionList() {
+    return await this.productDescription.allTextContents();
+  }
+
+  async getProductPriceList() {
+    const productPriceTextList = await this.productPrice.allTextContents();
+    return productPriceTextList.map((price) =>
+      parseFloat(price.replace("$", ""))
+    );
+  }
+
+  async getCount() {
+    return await this.productName.count();
+  }
+
+  async clickProductName(i) {
+    await this.productName.nth(i).click();
+  }
+
+  async clickRemoveFromCartButton(i) {
+    await this.removeFromCartButton.nth(i).click();
   }
 }
 
