@@ -10,6 +10,10 @@ test.describe("Shopping Cart Feature", () => {
   let headerPage;
   let context;
   let page;
+  let shoppingCartBadgeCount = null;
+  let removeFromCartButtonCount = null;
+  let productNamesAdded = [];
+  let productDescriptionsAdded = [];
 
   test.beforeAll(async ({ browser }) => {
     context = await browser.newContext();
@@ -25,8 +29,6 @@ test.describe("Shopping Cart Feature", () => {
   });
 
   test.beforeEach(async () => {
-    let shoppingCartBadgeCount = null;
-    let removeFromCartButtonCount = null;
     let isVisible = await headerPage.shoppingCartBadgeIsVisible();
     if (isVisible) {
       shoppingCartBadgeCount = await headerPage.getShoppingCartBadgeCount();
@@ -36,6 +38,10 @@ test.describe("Shopping Cart Feature", () => {
     }
 
     for (let i = 0; i < 2; i++) {
+      const name = await inventoryPage.getProductName(i);
+      const description = await inventoryPage.getProductDescription(i);
+      productNamesAdded.push(name);
+      productDescriptionsAdded.push(description);
       await inventoryPage.clickAddToCartButton(0);
     }
     await expect(headerPage.shoppingCartBadge).toBeVisible();
@@ -46,6 +52,7 @@ test.describe("Shopping Cart Feature", () => {
   });
 
   test("SD-28 Verify cart displays correct product details", async () => {
-    console.log("SD 28");
+    console.log(productNamesAdded);
+    console.log(productDescriptionsAdded);
   });
 });
