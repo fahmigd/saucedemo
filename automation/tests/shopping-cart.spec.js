@@ -14,6 +14,7 @@ test.describe("Shopping Cart Feature", () => {
   let removeFromCartButtonCount = null;
   let productNamesAdded = [];
   let productDescriptionsAdded = [];
+  let productPricesAdded = [];
 
   test.beforeAll(async ({ browser }) => {
     context = await browser.newContext();
@@ -40,8 +41,10 @@ test.describe("Shopping Cart Feature", () => {
     for (let i = 0; i < 2; i++) {
       const name = await inventoryPage.getProductName(i);
       const description = await inventoryPage.getProductDescription(i);
+      const price = await inventoryPage.getProductPrice(i);
       productNamesAdded.push(name);
       productDescriptionsAdded.push(description);
+      productPricesAdded.push(price);
       await inventoryPage.clickAddToCartButton(0);
     }
     await expect(headerPage.shoppingCartBadge).toBeVisible();
@@ -54,5 +57,6 @@ test.describe("Shopping Cart Feature", () => {
   test("SD-28 Verify cart displays correct product details", async () => {
     console.log(productNamesAdded);
     console.log(productDescriptionsAdded);
+    console.log(productPricesAdded);
   });
 });

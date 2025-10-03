@@ -32,7 +32,7 @@ class InventoryPage {
   }
 
   async getProductPrice(i) {
-    await this.productPrice.nth(i).textContent();
+    return await this.productPrice.nth(i).textContent();
   }
 
   async getProductNameList() {
